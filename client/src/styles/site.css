@@ -3,12 +3,12 @@
 .sound-wave path { vector-effect: non-scaling-stroke; }
 
 .brand { display: inline-flex; align-items: center; gap: 13px; color: var(--cream); font-weight: 700; white-space: nowrap; }
-.brand__wave { width: 53px; fill: none; stroke: var(--copper-bright); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.brand__mark { width: 49px; height: 49px; flex: none; color: var(--copper-bright); filter: drop-shadow(0 6px 18px rgba(199,119,60,.16)); }
 .brand__lockup { display: flex; flex-direction: column; gap: 2px; }
 .brand__name { font-size: 25px; line-height: 1.1; }
 .brand small { color: #9b9184; font-family: Arial, sans-serif; font-size: 8px; font-weight: 600; letter-spacing: .38em; }
 .brand--compact .brand__name { font-size: 20px; }
-.brand--compact .brand__wave { width: 41px; }
+.brand--compact .brand__mark { width: 38px; height: 38px; }
 
 .site-header { position: fixed; z-index: 40; inset: 0 0 auto; height: 92px; border-bottom: 1px solid rgba(240,232,218,.12); transition: background .35s, height .35s, border-color .35s; }
 .site-header--scrolled { height: 74px; background: rgba(11,10,8,.9); border-color: rgba(240,232,218,.08); backdrop-filter: blur(18px); }
@@ -160,7 +160,7 @@
 .footer { padding: 72px 0; border-top: 1px solid rgba(199,119,60,.55); background-color: var(--ink); background-image: radial-gradient(rgba(240,232,218,.025) .7px, transparent .7px); background-size: 5px 5px; }
 .footer__inner { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: end; gap: 40px; }
 .footer__brand .brand__name { color: var(--copper-bright); font-size: 42px; }
-.footer__brand .brand__wave { width: 68px; }
+.footer__brand .brand__mark { width: 61px; height: 61px; }
 .footer__brand p { margin: 20px 0 0; color: #887f73; font-size: 12px; }
 .footer__quote { justify-self: center; margin: 0; color: var(--cream); font-size: 18px; line-height: 1.9; text-align: center; }
 .footer__legal { justify-self: end; color: #71695f; font-size: 10px; }
@@ -189,7 +189,7 @@
   .site-header, .site-header--scrolled { height: 68px; }
   .site-header__inner { display: flex; justify-content: space-between; }
   .site-header .brand__name { font-size: 20px; }
-  .site-header .brand__wave { width: 40px; }
+  .site-header .brand__mark { width: 40px; height: 40px; }
   .menu-toggle { display: block; z-index: 2; }
   .site-nav { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100vw; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; gap: 24px; background: rgba(11,10,8,.985); font-size: 22px; opacity: 0; visibility: hidden; transform: translateY(-12px); transition: .25s; }
   .site-nav--open { opacity: 1; visibility: visible; transform: none; }

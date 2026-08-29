@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>کافه صدا</title>
-  <rect width="64" height="64" rx="15" fill="#0b0a08"/>
+  <title>نشان کافه صدا</title>
   <mask id="wave-cut">
     <rect width="64" height="64" fill="white"/>
     <path d="M5 32h8c4 0 4-10 7-10s4 20 7.5 20S31 11 34.5 11 38 42 41.5 42 45 22 48 22s4 10 8 10h5" fill="none" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
