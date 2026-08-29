@@ -33,6 +33,8 @@ ADMIN_USERNAME=admin
 ADMIN_PASSWORD=admin123
 TRUST_PROXY=1
 COOKIE_SECURE=false
+BIND_ADDRESS=127.0.0.1
+APP_PORT=8088
 ```
 
 برای ساخت Secret امن:
@@ -53,6 +55,8 @@ curl --fail http://127.0.0.1:8088/health
 ```
 
 خروجی Health Check باید شامل `"status":"ok"` باشد.
+
+اگر سرور از قبل روی پورت ۸۰ سرویس‌های دیگری دارد و فقط انتشار آزمایشی شبکه داخلی لازم است، Nginx را تغییر ندهید و در `.env` مقدار `BIND_ADDRESS=0.0.0.0` قرار دهید. آدرس تست در این حالت `http://SERVER_IP:8088` است. این پورت را فقط در شبکه مورد اعتماد باز کنید.
 
 ## ۴. Nginx
 
