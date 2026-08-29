@@ -1,0 +1,49 @@
+{
+  "site": {
+    "name": "کافه صدا",
+    "heroTitle": "هر فنجان، یک صدا. هر لحظه، یک خاطره.",
+    "heroDescription": "قهوه‌ای از دانه‌های تازه‌برشته، موسیقی گرم و گوشه‌ای آرام برای مکث؛ اینجا هر دیدار می‌تواند به خاطره‌ای ماندگار تبدیل شود.",
+    "storyTitle": "قصه‌ای که شنیدنی‌ست",
+    "story": "کافه صدا جایی‌ست برای شنیدن و شنیده شدن؛ جایی میان عطر قهوه و نغمه موسیقی که گفت‌وگوهای واقعی شکل می‌گیرند. ما به قهوه احترام می‌گذاریم، به موسیقی گوش می‌دهیم و باور داریم بهترین ایده‌ها در سکوتی گرم متولد می‌شوند.",
+    "phone": "۰۲۱-۸۸۷۷ ۴۴۳۳",
+    "address": "تهران، خیابان کریم‌خان، کوچه آبان، پلاک ۱۲",
+    "hours": "هر روز از ۸ صبح تا ۱۱ شب",
+    "instagram": "@cafeseda",
+    "mapUrl": "https://maps.google.com"
+  },
+  "seo": {
+    "title": "کافه صدا | قهوه تخصصی، موسیقی و لحظه‌های ماندگار",
+    "description": "منوی کامل کافه صدا؛ قهوه تخصصی، نوشیدنی‌های سرد، صبحانه و دسر در فضایی گرم با موسیقی شنیدنی.",
+    "keywords": "کافه صدا، کافی شاپ، قهوه تخصصی، کافه تهران، منوی کافه، صبحانه",
+    "ogImage": "/assets/hero-cafe-seda.webp"
+  },
+  "categories": [
+    {"id":"hot-coffee","name":"قهوه گرم","order":1},
+    {"id":"cold-coffee","name":"قهوه سرد","order":2},
+    {"id":"drinks","name":"نوشیدنی","order":3},
+    {"id":"breakfast","name":"صبحانه","order":4},
+    {"id":"dessert","name":"کیک و دسر","order":5}
+  ],
+  "menuItems": [
+    {"id":"espresso","name":"اسپرسو","description":"شات کوتاه و غلیظ از دانه‌های منتخب عربیکا","price":95000,"categoryId":"hot-coffee","available":true},
+    {"id":"americano","name":"آمریکانو","description":"اسپرسو با آب داغ؛ ساده، متعادل و خوش‌عطر","price":110000,"categoryId":"hot-coffee","available":true},
+    {"id":"latte","name":"لاته","description":"اسپرسو با شیر بخارداده و لایه‌ای لطیف از فوم","price":145000,"categoryId":"hot-coffee","available":true,"featured":true},
+    {"id":"cappuccino","name":"کاپوچینو","description":"اسپرسو، شیر و فوم غلیظ با بافتی مخملی","price":145000,"categoryId":"hot-coffee","available":true},
+    {"id":"mocha","name":"موکا","description":"اسپرسو با شکلات تلخ و شیر بخارداده","price":155000,"categoryId":"hot-coffee","available":true},
+    {"id":"cold-brew","name":"کلدبرو","description":"قهوه دم‌آوری سرد ۱۸ ساعته؛ شفاف و ملایم","price":165000,"categoryId":"cold-coffee","available":true},
+    {"id":"iced-latte","name":"آیس لاته","description":"لاته خنک با یخ، لطیف و دلنشین","price":155000,"categoryId":"cold-coffee","available":true},
+    {"id":"iced-americano","name":"آیس آمریکانو","description":"اسپرسو، آب و یخ؛ تازه و انرژی‌بخش","price":135000,"categoryId":"cold-coffee","available":true},
+    {"id":"matcha","name":"ماچا لاته","description":"ماچای ژاپنی با شیر؛ سبز، لطیف و آرامش‌بخش","price":175000,"categoryId":"drinks","available":true},
+    {"id":"hot-chocolate","name":"هات چاکلت","description":"شکلات تلخ غلیظ با پودر کاکائوی خالص","price":135000,"categoryId":"drinks","available":true},
+    {"id":"lemonade","name":"لیموناد تازه","description":"لیموناد خانگی با نعناع تازه","price":115000,"categoryId":"drinks","available":true},
+    {"id":"avocado-toast","name":"تست آووکادو","description":"نان تست، آووکادو، پنیر خامه‌ای و تخم‌مرغ آب‌پز","price":185000,"categoryId":"breakfast","available":true},
+    {"id":"french-omelette","name":"املت فرانسوی","description":"املت تازه با سبزیجات فصل و نان تست","price":175000,"categoryId":"breakfast","available":true},
+    {"id":"san-sebastian","name":"چیزکیک سن‌سباستین","description":"چیزکیک خامه‌ای با بافتی لطیف و کاراملی","price":185000,"categoryId":"dessert","available":true},
+    {"id":"brownie","name":"براونی شکلاتی","description":"براونی گرم با شکلات تلخ و گردو","price":155000,"categoryId":"dessert","available":true}
+  ],
+  "media": [
+    {"id":"vinyl","type":"image","title":"صدای یک عصر آرام","url":"/assets/gallery-vinyl.webp","poster":"/assets/gallery-vinyl.webp","order":1},
+    {"id":"barista","type":"image","title":"پشت بار کافه صدا","url":"/assets/gallery-barista.webp","poster":"/assets/gallery-barista.webp","order":2},
+    {"id":"latte-art","type":"image","title":"هر فنجان با دقت","url":"/assets/menu-flat-white.webp","poster":"/assets/menu-flat-white.webp","order":3}
+  ]
+}

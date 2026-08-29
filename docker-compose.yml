@@ -1,0 +1,28 @@
+services:
+  cafe-seda:
+    build: .
+    image: cafe-seda:latest
+    container_name: cafe-seda
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    ports:
+      - "127.0.0.1:8088:3000"
+    volumes:
+      - cafe_seda_data:/app/server/data
+      - cafe_seda_uploads:/app/server/uploads
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  cafe_seda_data:
+  cafe_seda_uploads:
+
