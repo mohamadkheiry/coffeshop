@@ -1,8 +1,9 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import bcrypt from 'bcryptjs';
 
-const root = path.resolve(process.cwd(), 'server');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const dataDir = path.join(root, 'data');
 export const uploadsDir = path.join(root, 'uploads');
 const contentPath = path.join(dataDir, 'content.json');
@@ -65,4 +66,3 @@ export function updateContent(mutator) {
   });
   return writeQueue;
 }
-

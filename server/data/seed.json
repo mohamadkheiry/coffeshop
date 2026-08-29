@@ -15,7 +15,7 @@
     "title": "کافه صدا | قهوه تخصصی، موسیقی و لحظه‌های ماندگار",
     "description": "منوی کامل کافه صدا؛ قهوه تخصصی، نوشیدنی‌های سرد، صبحانه و دسر در فضایی گرم با موسیقی شنیدنی.",
     "keywords": "کافه صدا، کافی شاپ، قهوه تخصصی، کافه تهران، منوی کافه، صبحانه",
-    "ogImage": "/assets/hero-cafe-seda.webp"
+    "ogImage": "/assets/hero-cafe-seda-v2.webp"
   },
   "categories": [
     {"id":"hot-coffee","name":"قهوه گرم","order":1},
@@ -42,8 +42,8 @@
     {"id":"brownie","name":"براونی شکلاتی","description":"براونی گرم با شکلات تلخ و گردو","price":155000,"categoryId":"dessert","available":true}
   ],
   "media": [
-    {"id":"vinyl","type":"image","title":"صدای یک عصر آرام","url":"/assets/gallery-vinyl.webp","poster":"/assets/gallery-vinyl.webp","order":1},
-    {"id":"barista","type":"image","title":"پشت بار کافه صدا","url":"/assets/gallery-barista.webp","poster":"/assets/gallery-barista.webp","order":2},
-    {"id":"latte-art","type":"image","title":"هر فنجان با دقت","url":"/assets/menu-flat-white.webp","poster":"/assets/menu-flat-white.webp","order":3}
+    {"id":"listening-room","type":"image","title":"اتاق شنیدن کافه صدا","url":"/assets/gallery-listening-room-v2.webp","poster":"/assets/gallery-listening-room-v2.webp","order":1},
+    {"id":"barista","type":"image","title":"مهارت پشت هر فنجان","url":"/assets/gallery-barista-v2.webp","poster":"/assets/gallery-barista-v2.webp","order":2},
+    {"id":"latte-art","type":"image","title":"قهوه و شیرینی تازه","url":"/assets/menu-signature-v2.webp","poster":"/assets/menu-signature-v2.webp","order":3}
   ]
 }

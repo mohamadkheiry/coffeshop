@@ -1,5 +1,6 @@
 import path from 'node:path';
 import { readFile, unlink, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 import crypto from 'node:crypto';
 import express from 'express';
 import helmet from 'helmet';
@@ -16,7 +17,8 @@ import { injectSeo } from './seo.js';
 const app = express();
 const port = Number(process.env.PORT || 3000);
 const publicUrl = process.env.PUBLIC_URL || `http://localhost:${port}`;
-const clientDist = path.resolve(process.cwd(), 'client', 'dist');
+const serverRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const clientDist = path.resolve(serverRoot, '..', 'client', 'dist');
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: 50 * 1024 * 1024, files: 1 },

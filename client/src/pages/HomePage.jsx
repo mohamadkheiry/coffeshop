@@ -27,7 +27,7 @@ export default function HomePage() {
         <meta name="description" content={content.seo.description} />
         <meta name="keywords" content={content.seo.keywords} />
       </Helmet>
-      <Header />
+      <Header site={content.site} />
       <main>
         <Hero site={content.site} />
         <MenuSection categories={content.categories} items={content.menuItems} />

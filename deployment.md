@@ -154,7 +154,29 @@ sudo tail -f /var/log/nginx/access.log /var/log/nginx/error.log
 
 پایش پیشنهادی: درخواست دوره‌ای `/health` هر یک دقیقه، هشدار پس از سه خطای متوالی، کنترل فضای دیسک و تاریخ آخرین Backup.
 
-## ۹. بازگشت نسخه (Rollback)
+## ۹. بازیابی خودکار بعد از قطع برق
+
+Compose برای سرویس سیاست `restart: unless-stopped` دارد؛ بنابراین پس از بالا آمدن Docker، Container بدون اجرای دستی برمی‌گردد. Docker را در Boot سیستم فعال و وضعیت را کنترل کنید:
+
+```bash
+sudo systemctl enable --now docker
+systemctl is-enabled docker
+docker inspect -f '{{.HostConfig.RestartPolicy.Name}}' cafe-seda
+```
+
+دو خروجی مورد انتظار به‌ترتیب `enabled` و `unless-stopped` هستند. برای شبیه‌سازی امن Restart میزبان، ابتدا از پنل مدیریت یک تغییر آزمایشی ذخیره کنید، سپس در یک بازه نگهداری سرور را Restart و این موارد را بررسی کنید:
+
+```bash
+sudo reboot
+# پس از اتصال مجدد
+systemctl is-active docker
+docker compose -f /home/mr-kheiry/apps/cafe-seda/docker-compose.yml ps
+curl --fail http://127.0.0.1:8088/health
+```
+
+حفظ تغییر آزمایشی بعد از Restart ثابت می‌کند هر دو Volume داده و آپلود نیز درست Mount شده‌اند. اگر Container پیش از Restart با دستور دستی `docker stop` متوقف شده باشد، رفتار `unless-stopped` عمداً آن را خودکار بالا نمی‌آورد؛ با `docker compose up -d` دوباره فعالش کنید.
+
+## ۱۰. بازگشت نسخه (Rollback)
 
 1. شناسه Commit پایدار قبلی را مشخص کنید.
 2. از داده و آپلودها Backup بگیرید.
@@ -164,7 +186,7 @@ sudo tail -f /var/log/nginx/access.log /var/log/nginx/error.log
 
 هیچ‌گاه برای Rollback از `git reset --hard` روی نسخه‌ای با تغییرات محلی ناشناخته استفاده نکنید. از Checkout یک Tag یا Worktree جداگانه استفاده کنید.
 
-## ۱۰. چک‌لیست انتشار
+## ۱۱. چک‌لیست انتشار
 
 - [ ] `npm run check` موفق است.
 - [ ] `npm audit --omit=dev` آسیب‌پذیری High/Critical ندارد.
@@ -177,3 +199,4 @@ sudo tail -f /var/log/nginx/access.log /var/log/nginx/error.log
 - [ ] ورود، ویرایش منو، آپلود رسانه و Logout تست شده است.
 - [ ] `robots.txt`، `sitemap.xml`، Meta و Structured Data بررسی شده‌اند.
 - [ ] آخرین Backup قابل خواندن است و زمان آن ثبت شده است.
+- [ ] سرویس Docker در Boot فعال و Restart Policy کانتینر `unless-stopped` است.

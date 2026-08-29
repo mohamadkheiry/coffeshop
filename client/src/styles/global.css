@@ -1,23 +1,26 @@
 :root {
   font-family: "Vazirmatn", Tahoma, sans-serif;
-  color: #f4ead9;
-  background: #15120f;
+  color: #f0e8da;
+  background: #0b0a08;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --ink: #15120f;
-  --ink-soft: #211d18;
-  --cream: #f4ead9;
-  --cream-muted: #c2b5a3;
-  --amber: #c7894b;
-  --amber-bright: #e1a25d;
-  --olive: #657052;
-  --line: rgba(244, 234, 217, .16);
-  --shell: min(1380px, calc(100% - 96px));
+  --ink: #0b0a08;
+  --ink-soft: #17120e;
+  --cream: #f0e8da;
+  --cream-muted: #bcb0a0;
+  --paper: #f0e8da;
+  --copper: #c7773c;
+  --copper-bright: #e08b4a;
+  --amber: var(--copper);
+  --amber-bright: var(--copper-bright);
+  --olive: #76806a;
+  --line: rgba(240, 232, 218, .16);
+  --shell: min(1460px, calc(100% - 100px));
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 82px; }
-body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--ink); }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--ink); letter-spacing: -.01em; }
 body, button, input, textarea, select { font-family: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
@@ -32,4 +35,3 @@ img, video { display: block; max-width: 100%; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (max-width: 800px) { :root { --shell: min(100% - 40px, 680px); } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
-

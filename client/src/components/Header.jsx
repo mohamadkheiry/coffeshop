@@ -3,10 +3,10 @@ import { Menu, X } from 'lucide-react';
 import Brand from './Brand';
 
 const links = [
-  ['خانه', 'home'], ['منو', 'menu'], ['داستان ما', 'story'], ['گالری', 'gallery'], ['تماس', 'contact'],
+  ['خانه', 'home'], ['منو', 'menu'], ['داستان ما', 'story'], ['لحظه‌ها', 'gallery'], ['تماس', 'contact'],
 ];
 
-export default function Header() {
+export default function Header({ site }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,6 +25,7 @@ export default function Header() {
           {links.map(([label, id]) => <a key={id} href={`#${id}`} onClick={() => setOpen(false)}>{label}</a>)}
           <a className="site-nav__admin" href="/admin">مدیریت سایت</a>
         </nav>
+        <div className="site-header__meta"><span /><small>{site.hours}</small></div>
         <button className="menu-toggle" onClick={() => setOpen((value) => !value)} aria-label={open ? 'بستن منو' : 'باز کردن منو'} aria-expanded={open}>
           {open ? <X /> : <Menu />}
         </button>
@@ -32,4 +33,3 @@ export default function Header() {
     </header>
   );
 }
-
